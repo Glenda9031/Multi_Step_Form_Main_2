@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Start Universal Styles */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+  --clr-primary-marine-blue: hsl(213, 96%, 18%);
+  --clr-primary-purplish-blue: hsl(243, 100%, 62%);
+  --clr-primary-pastel-blue: hsl(228, 100%, 84%);
+  --clr-primary-light-blue: hsl(206, 94%, 87%);
+  --clr-primary-strawberry-red: hsl(354, 84%, 57%);
+
+  --clr-neutral-cool-gray: hsl(231, 11%, 63%);
+  --clr-neutral-light-gray: hsl(229, 24%, 87%);
+  --clr-neutral-magnolia: hsl(217, 100%, 97%);
+  --clr-neutral-alabaster: hsl(231, 100%, 99%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/* End Universal Styles */

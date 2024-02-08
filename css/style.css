@@ -23,9 +23,46 @@
   --clr-neutral-white: hsl(0, 0%, 100%);
 }
 
+li {
+  list-style: none;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    background-color: var(--clr-neutral-magnolia);
+    position: relative;
 }
+
+input,
+button {
+  font: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 48rem) {
+  html {
+    font-size: 60%;
+  }
+}
+/* End Universal Style */
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: inline-block;
+}
+
 
 
 

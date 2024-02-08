@@ -55,6 +55,7 @@ html {
 }
 /* End Universal Style */
 
+/* Start Step Section */
 .step {
   display: none;
 }
@@ -63,7 +64,142 @@ html {
   display: inline-block;
 }
 
+.form__steps--title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--clr-primary-marine-blue);
+  padding-bottom: 0.3125rem;
+}
+
+.form__steps--description {
+  color: var(--clr-neutral-cool-gray);
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-bottom: 1.875rem;
+}
+/* End Step Section */
+
+/* Start Card Section */
+.card {
+  border: 0.125rem solid var(--clr-neutral-light-gray);
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 48rem) {
+  .card {
+    padding: 0.625rem;
+  }
+
+  .add-ons__card {
+    min-height: 5.625rem;
+  }
+}
+
+.card:hover {
+  border-color: var(--clr-primary-pastel-blue);  
+}
+
+.card.selected {
+  background-color: var(--clr-neutral-magnolia);
+  border-color: var(--clr-primary-pastel-blue);
+}
+
+.steps__section--title {
+  color: var(--clr-neutral-light-gray);
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-bottom: 0.125rem;
+}
+
+.steps__section--subtitle {
+  color: var(--clr-neutral-white);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.plan__card--price {
+  color: var(--clr-neutral-cool-gray);
+  font-weight: 500;
+}
+
+.plan__card--name {
+  color: var(--clr-primary-marine-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  margin-bottom: 0.125rem;
+}
+
+.card__description {
+  color: var(--clr-neutral-cool-gray);
+  font-weight: 500;
+}
+/* End Card Section */
+
+/* Start Main Section */
+.main {
+  max-width: 65.625rem;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-magnolia);
+  place-self: center;
+}
+
+@media (max-width: 48rem) {
+  .main {
+    align-items: flex-start;
+  }
+}
+/* End Main Section */
+
+/* Start Steps Section */
+.steps__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18.125rem 1fr;
+    gap: 1.5625rem;
+    min-height: 37.5rem;
+    background-color: var(--clr-neutral-white);
+    padding: 0.9375rem;
+}
+
+@media (min-width: 57.5rem) {
+  .steps__container {
+    gap: 6.25rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .steps__container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    padding-bottom: 5.625rem;
+    background-color: var(--clr-neutral-magnolia);
+  }
+}
+/* End Steps Section */
+
+/* Start Sidebar Section */
 
 
 
-/* End Universal Styles */
+
+/* End Sidebar Section */
+
+
+
+
+
+
+
+

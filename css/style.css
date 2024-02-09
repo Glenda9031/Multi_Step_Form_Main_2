@@ -190,16 +190,156 @@ html {
 /* End Steps Section */
 
 /* Start Sidebar Section */
-
-
-
-
+.sidebar {
+  width: 100%;
+  border-radius: 0.625rem;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background: url('../assets/images/bg-sidebar-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1.875rem 1.25rem;
+  margin-right: auto;
+}
 /* End Sidebar Section */
 
+/* Start Step Number and Name Container Section */
+.steps__section {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.875rem;
+}
+
+.steps__section--num {
+  border: 0.0625rem solid var(--clr-neutral-light-gray);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--clr-neutral-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-right: 0.9375rem;
+}
+
+.steps__section--num.active {
+  background-color: var(--clr-primary-light-blue);
+  color: var(--clr-primary-marine-blue);
+}
+
+@media (max-width: 48rem) {
+  .sidebar {
+    border-radius: 0;
+    background: url(../assets/images/bg-sidebar-mobile.svg);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 11.875rem;
+  }
+
+  .steps__section {
+    padding: 0;
+  }
+
+  .steps__section > steps__section--text {
+    display: none;
+  }
+
+  .steps__section .steps__section--num {
+    margin: 0 0.625rem;
+  }
+}
+/* End Step Number and Name Container Section */
+
+/* Start Plan Section */
+.form__steps--container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-top: 1.5625rem;
+  padding-right: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 48rem) {
+  .form__steps--container {
+    padding: 0;
+    align-items: center;
+  }
+
+  .steps {
+    width: 95%;
+    background-color: var(--clr-neutral-white);
+    margin-top: -4.375rem;
+    border-radius: 0.625rem;
+    padding: 1.25rem 0.9375rem; 
+  }
+}
+/* End Plan Section */
+
+/* Start Personal Info | Step 1 Section */
+.form__steps--list {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__steps--list-item {
+  margin-bottom: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__steps--input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3125rem;
+}
+
+.form__steps--label {
+  color: var(--clr-primary-marine-blue);
+  font-weight: 500;
+}
+
+.form__steps--warning {
+  color: var(--clr-primary-strawberry-red);
+  font-weight: 500;
+}
+
+.input {
+  padding: 0.625rem;
+  border: 0.125rem solid var(--clr-neutral-cool-gray);
+  border-radius: 0.3125rem;
+  width: 100%;
+  font-weight: 500;
+  color: var(--clr-primary-marine-blue);
+  font-size: 1.7rem;
+}
+
+.input:hover {
+  border-color: var(--clr-primary-pastel-blue);
+  transition: 0.25s;
+}
+
+.input.error,
+.input:hover {
+  border-color: var(--clr-primary-strawberry-red);
+  transition: 0.25s;
+}
+
+#select-plan-error {
+  color: var(--clr-primary-strawberry-red);
+  font-weight: 700;
+  text-align: center;
+  height: 1.25rem;
+  margin-bottom: 0.3125rem;
+}
 
 
 
 
-
-
-
+/* End Personal Info | Step 1 Section */

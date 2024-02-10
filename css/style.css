@@ -65,7 +65,7 @@ html {
 }
 
 .form__steps--title {
-  font-size: 3.2rem;
+  font-size: 2.9rem;
   font-weight: 700;
   color: var(--clr-primary-marine-blue);
   padding-bottom: 0.3125rem;
@@ -339,7 +339,353 @@ html {
   margin-bottom: 0.3125rem;
 }
 
+.plan__card--container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.625rem;
+  min-height: 20.625rem; 
+}
 
+.plan__card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+}
 
+.plan__card > .plan__card--img {
+  margin-bottom: auto;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin-right: 1.5625rem;
+}
 
+.toggle__container {
+  border-radius: .3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem;
+  background-color: var(--clr-neutral-magnolia);
+  font-weight: 700;
+  margin-bottom: .625rem;
+}
+
+.toggle__container > p {
+  color: var(--clr-primary-marine-blue);
+  font-weight: 500;
+}
+
+.toggle {
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: .9375rem;
+  margin: .3125rem 0;
+  background-color: var(--clr-primary-marine-blue);
+  display: flex;
+  align-items: center;
+  margin: 0 .75rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.toggle__circle {
+  width: .9375rem;
+  height: .9375rem;
+  border-radius: 50%;
+  margin: 0 .125rem;
+  background-color: var(--clr-neutral-white);
+}
+
+.yearly__benefit {
+  color: var(--clr-primary-marine-blue);
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-top: .3125rem;
+  display: none;
+}
+
+.yearly__benefit.show {
+  display: inline-block;
+}
+
+.toggle.active {
+  justify-content: flex-end;
+}
+
+.monthly__plan {
+  opacity: 0.5;
+}
+
+.yearly__plan {
+  opacity: 0.5;
+}
+
+.selected__plan {
+  opacity: 1;
+}
+
+@media (min-width: 53.125rem) {
+  .plan__card--container {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
+    padding-bottom: 2.1875rem;
+  }
+
+  .plan__card {
+    height: 11.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+
+  .plan__card > .plan__card--img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
 /* End Personal Info | Step 1 Section */
+
+/* Start Buttons Section */
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: .625rem .9375rem;
+  border-radius: .3125rem;
+}
+
+.next__button {
+  color: var(--clr-neutral-light-gray);
+  background-color: var(--clr-primary-marine-blue);
+}
+
+.next__button:hover {
+  transition: background-color 0.3s;
+  background-color: var(--clr-primary-purplish-blue);
+}
+
+.prev__button {
+  color: var(--clr-neutral-cool-gray);
+  background-color: var(--clr-neutral-white);
+  padding: 0;
+}
+
+.prev__button:hover {
+  color: var(--clr-primary-marine-blue);
+}
+
+@media (max-width: 48rem) {
+  .button__container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--clr-neutral-white);
+    width: 100%;
+    padding: .9375rem .625rem;
+  }
+}
+
+.button.hidden {
+  opacity: 0;
+  cursor: auto;
+}
+.button__container.hidden {
+  display: none;
+}
+/* End Buttons Section */
+
+/* Start Step 3 | Add-ons and Checkbox Section */
+.add-ons__card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.checkbox[type="checkbox"] {
+  margin-right: 1.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: none;
+  font: inherit;
+  color: none;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.15em solid var(--clr-neutral-light-gray);
+  cursor: pointer;
+  border-radius: 0.2em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+@media (min-width: 30rem) {
+  .checkbox[type="checkbox"]:hover {
+    border-color: var(--clr-primary-marine-blue);
+    transition: 0.25s;
+  }
+}
+
+.checkbox[type="checkbox"]:checked {
+  border-color: var(--clr-primary-purplish-blue);
+  background-color: var(--clr-primary-purplish-blue);
+}
+
+.checkbox[type="checkbox"]::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  box-shadow: inset 1em 1em var(--clr-neutral-white);
+  transform-origin: bottom left;
+  -webkit-clip-path: polygon(
+    14% 44%,
+    0% 65%,
+    50% 100%,
+    100% 16%,
+    80% 0%,
+    43% 62%
+  );
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transition: transform 120ms ease-in-out;
+  transform: scale(0);
+}
+
+.checkbox[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+/* End Step 3 | Add-ons Section */
+
+/* Start Step 4 | Card Section */
+.card__text {
+  margin-right: auto;
+}
+
+.finishing-up-card__container {
+  background-color: var(--clr-neutral-magnolia);
+  border: none;
+  padding: .625rem 1.25rem;
+  cursor: auto;
+}
+
+.selected-plan__container {
+  padding-top: .625rem;
+  padding-bottom: 1.25rem;
+}
+
+.change__plan {
+  border: none;
+  background-color: transparent;
+  font-size: 1.9rem;
+  color: var(--clr-neutral-cool-gray);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.change__plan:hover {
+  color: var(--clr-primary-purplish-blue);
+}
+
+#selected__plan {
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-marine-blue);
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-bottom: .3125rem;
+}
+
+#selected__plan > p:nth-child(3) {
+  margin-left: auto;
+}
+
+#selected__plan > p:nth-child(2) {
+  margin-left: .25rem;
+}
+
+#selected-addon > li {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#selected-addon > li:nth-child(1) {
+  border-top: .0625rem solid var(--clr-neutral-cool-gray);
+  padding-top: 1.5625rem;
+}
+
+#selected-addon > li > p:nth-child(1) {
+  color: var(--clr-neutral-cool-gray);
+}
+
+#selected-addon > li > p:nth-child(2) {
+  color: var(--clr-primary-marine-blue);
+}
+/* End Start Step 4 | Card Section */
+
+/* Start Total Price Section */
+#total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem;
+}
+
+#total > span:nth-child(1) {
+  color: var(--clr-neutral-cool-gray);
+  font-size: 1.9rem;
+}
+
+#total > span:nth-child(2) {
+  color: var(--clr-primary-purplish-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 30.0625rem) {
+  #total > span:nth-child(2) {
+    font-size: 2remm;
+  }
+}
+
+.last-step {
+  min-height: 100%;
+  text-align: center;
+}
+.final__img {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin-top: 20%;
+  margin-inline: auto;
+  margin-bottom: 2.1875rem;
+}
+
+.last-step > .form__steps--title {
+  padding-bottom: .625rem;
+}
+
+.last-step > .form__steps--description {
+  max-width: 31.25rem;
+  margin: 0 auto;
+}
+
+
+
+
+/* End Total Price Section */
+
+
+
